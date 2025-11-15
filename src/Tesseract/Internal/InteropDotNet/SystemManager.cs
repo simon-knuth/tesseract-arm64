@@ -10,7 +10,18 @@ namespace InteropDotNet
     {
         public static string GetPlatformName()
         {
-            return IntPtr.Size == sizeof(int) ? "x86" : "x64";
+            switch (RuntimeInformation.ProcessArchitecture)
+            {
+                case Architecture.X86:
+                    return "x86";
+                default:
+                case Architecture.X64:
+                    return "x64";
+                case Architecture.Arm:
+                    return "ARM";
+                case Architecture.Arm64:
+                    return "ARM64";
+            }
         }
 
         public static OperatingSystem GetOperatingSystem()

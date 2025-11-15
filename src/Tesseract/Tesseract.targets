@@ -17,5 +17,13 @@
             <Link>x64\tesseract50.dll</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Include="$(MSBuildThisFileDirectory)\..\ARM64\leptonica-1.82.0.dll">
+            <Link>ARM64\leptonica-1.82.0.dll</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="$(MSBuildThisFileDirectory)\..\ARM64\tesseract50.dll">
+            <Link>ARM64\tesseract50.dll</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 </Project>
